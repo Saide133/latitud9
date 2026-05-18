@@ -19,6 +19,7 @@
   text-transform: uppercase;
   color: var(--text);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .navbar__links {
@@ -64,4 +65,68 @@
 .navbar__theme-toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.navbar__hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text2);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.navbar__hamburger:hover {
+  color: var(--accent);
+}
+
+.navbar__mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border-bottom: 0.5px solid var(--border2);
+  padding: 1rem 2rem 1.5rem;
+  z-index: 99;
+}
+
+.navbar__mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.navbar__mobile-links li {
+  border-bottom: 0.5px solid var(--border);
+}
+
+.navbar__mobile-links a {
+  display: block;
+  padding: 14px 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar__mobile-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

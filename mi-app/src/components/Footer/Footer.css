@@ -14,6 +14,18 @@
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
 .footer__brand-name {
   font-size: 15px;
   font-weight: 500;
