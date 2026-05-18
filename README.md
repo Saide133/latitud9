@@ -6,6 +6,11 @@ E-commerce de café de especialidad desarrollado como proyecto final del curso d
 
 [latitud9.netlify.app](https://latitud9.netlify.app)
 
+<img width="1920" height="956" alt="1" src="https://github.com/user-attachments/assets/1dc62955-0252-4d05-9ed8-bffd97bb53b6" />
+<img width="1919" height="960" alt="3" src="https://github.com/user-attachments/assets/580ca5df-e211-4d48-a1d7-ef376a2d23b7" />
+<img width="1920" height="957" alt="4" src="https://github.com/user-attachments/assets/75f9861f-4485-4cb7-ab33-42c28de8c76f" />
+
+
 ## Sobre el proyecto
 
 Latitud 9 es una tienda online de café de especialidad de origen único. Ofrece granos de origen, blends, equipamiento barista y kits de regalo. El proyecto implementa un flujo de compra completo desde el catálogo hasta la confirmación de orden.
@@ -60,6 +65,8 @@ npm run dev
 El proyecto usa variables de entorno para proteger las credenciales de Firebase. El archivo `.env` no se incluye en el repositorio. Para obtener las credenciales, creá un proyecto en [Firebase Console](https://console.firebase.google.com/) y registrá una app web.
 
 ## Estructura del proyecto
+
+```text
 src/
 ├── components/
 │   ├── NavBar/
@@ -82,7 +89,7 @@ src/
 │   └── config.js
 ├── App.jsx
 └── main.jsx
-
+```
 ## Autor
 
 Desarrollado por **Lucía Nuñez** — Coderhouse React JS 2026
