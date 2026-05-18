@@ -1,0 +1,35 @@
+.cart-widget {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text2);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.cart-widget:hover {
+  color: var(--accent);
+}
+
+.cart-widget__icon {
+  font-size: 20px;
+}
+
+.cart-widget__count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 10px;
+  font-weight: 600;
+  font-family: system-ui, sans-serif;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

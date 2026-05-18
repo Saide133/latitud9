@@ -1,0 +1,238 @@
+.home {}
+
+/* HERO */
+.home__hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+.home__hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+.home__hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.home__hero-bg--active {
+  opacity: 1;
+}
+
+.home__hero-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 6px;
+  z-index: 1;
+}
+
+.home__hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(240,235,224,0.3);
+  transition: background 0.3s;
+}
+
+.home__hero-dot--active {
+  background: var(--accent);
+}
+
+.home__hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.home__hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.home__hero-title {
+  font-size: 52px;
+  font-weight: 400;
+  color: #F0EBE0;
+  font-family: Georgia, serif;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.home__hero-sub {
+  font-size: 15px;
+  color: rgba(240,235,224,0.7);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 440px;
+}
+
+.home__hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.home__btn-primary {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  padding: 12px 28px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: system-ui, sans-serif;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.home__btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.home__btn-secondary {
+  background: transparent;
+  color: #F0EBE0;
+  border: 0.5px solid rgba(240,235,224,0.4);
+  padding: 12px 28px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: system-ui, sans-serif;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.home__btn-secondary:hover {
+  border-color: #F0EBE0;
+}
+
+/* CATEGORÍAS */
+.home__section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home__section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.home__section-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text);
+  font-family: Georgia, serif;
+}
+
+.home__section-link {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.home__section-link:hover {
+  opacity: 0.7;
+}
+
+.home__categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.home__category-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home__category-card:hover .home__category-img {
+  transform: scale(1.04);
+  filter: brightness(0.7);
+}
+
+.home__category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.5);
+}
+
+.home__category-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem;
+}
+
+.home__category-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: system-ui, sans-serif;
+  margin-bottom: 4px;
+}
+
+.home__category-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #F0EBE0;
+  font-family: Georgia, serif;
+}
+
+/* PRODUCTOS DESTACADOS */
+.home__divider {
+  height: 0.5px;
+  background: var(--border);
+  margin: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .home__hero-title {
+    font-size: 36px;
+  }
+
+  .home__categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

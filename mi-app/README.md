@@ -1,16 +1,88 @@
-# React + Vite
+# Latitud 9 ☕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce de café de especialidad desarrollado como proyecto final del curso de React JS en [Coderhouse](https://www.coderhouse.com/).
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Próximamente.
 
-## React Compiler
+## Sobre el proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Latitud 9 es una tienda online de café de especialidad de origen único. Ofrece granos de origen, blends, equipamiento barista y kits de regalo. El proyecto implementa un flujo de compra completo desde el catálogo hasta la confirmación de orden.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/) — navegación SPA
+- [Context API](https://react.dev/reference/react/useContext) — estado global del carrito y tema
+- [Firebase Firestore](https://firebase.google.com/docs/firestore) — base de datos de productos y órdenes
+- [React Icons](https://react-icons.github.io/react-icons/) — iconografía
+
+## Funcionalidades
+
+- Catálogo de productos con filtro por categoría y ordenamiento por precio
+- Vista de detalle de producto
+- Carrito de compras con manejo de cantidades
+- Checkout con validación de formulario
+- Confirmación de orden con ID generado en Firestore
+- Modo claro / oscuro con persistencia en sesión
+- Hero con carrusel automático de imágenes
+- Diseño responsive
+
+## Instalación
+
+1. Cloná el repositorio:
+```bash
+git clone https://github.com/tu-usuario/latitud9.git
+cd latitud9
+```
+
+2. Instalá las dependencias:
+```bash
+npm install
+```
+
+3. Creá un archivo `.env` en la raíz del proyecto con tus credenciales de Firebase:
+VITE_FIREBASE_API_KEY=...
+VITE_FIREBASE_AUTH_DOMAIN=...
+VITE_FIREBASE_PROJECT_ID=...
+VITE_FIREBASE_STORAGE_BUCKET=...
+VITE_FIREBASE_MESSAGING_SENDER_ID=...
+VITE_FIREBASE_APP_ID=...
+
+4. Corré el proyecto:
+```bash
+npm run dev
+```
+
+## Variables de entorno
+
+El proyecto usa variables de entorno para proteger las credenciales de Firebase. El archivo `.env` no se incluye en el repositorio. Para obtener las credenciales, creá un proyecto en [Firebase Console](https://console.firebase.google.com/) y registrá una app web.
+
+## Estructura del proyecto
+src/
+├── components/
+│   ├── NavBar/
+│   ├── CartWidget/
+│   ├── Home/
+│   ├── ItemListContainer/
+│   ├── ItemList/
+│   ├── Item/
+│   ├── ItemDetailContainer/
+│   ├── ItemDetail/
+│   ├── ItemCount/
+│   ├── Cart/
+│   ├── Checkout/
+│   ├── Confirmation/
+│   └── Footer/
+├── context/
+│   ├── CartContext.jsx
+│   └── ThemeContext.jsx
+├── firebase/
+│   └── config.js
+├── App.jsx
+└── main.jsx
+
+## Autor
+
+Desarrollado por **Lucía Nuñez** — Coderhouse React JS 2025
