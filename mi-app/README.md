@@ -4,7 +4,7 @@ E-commerce de café de especialidad desarrollado como proyecto final del curso d
 
 ## Demo
 
-Próximamente.
+[latitud9.netlify.app](https://latitud9.netlify.app)
 
 ## Sobre el proyecto
 
@@ -33,7 +33,7 @@ Latitud 9 es una tienda online de café de especialidad de origen único. Ofrece
 
 1. Cloná el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/latitud9.git
+git clone https://github.com/Saide133/latitud9.git
 cd latitud9
 ```
 
@@ -85,4 +85,4 @@ src/
 
 ## Autor
 
-Desarrollado por **Lucía Nuñez** — Coderhouse React JS 2025
+Desarrollado por **Lucía Nuñez** — Coderhouse React JS 2026
