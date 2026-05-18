@@ -1,9 +1,20 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 
 const CartContext = createContext()
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(() => {
+    try {
+      const saved = localStorage.getItem('latitud9-cart')
+      return saved ? JSON.parse(saved) : []
+    } catch {
+      return []
+    }
+  })
+
+  useEffect(() => {
+    localStorage.setItem('latitud9-cart', JSON.stringify(cart))
+  }, [cart])
 
   const addItem = (item, quantity) => {
     const exists = cart.find(p => p.id === item.id)
@@ -28,6 +39,16 @@ export const CartProvider = ({ children }) => {
     return cart.some(p => p.id === itemId)
   }
 
+  const updateQuantity = (itemId, quantity) => {
+    if (quantity <= 0) {
+      removeItem(itemId)
+      return
+    }
+    setCart(cart.map(p =>
+      p.id === itemId ? { ...p, quantity } : p
+    ))
+  }
+
   const getTotalQuantity = () => {
     return cart.reduce((acc, p) => acc + p.quantity, 0)
   }
@@ -35,16 +56,6 @@ export const CartProvider = ({ children }) => {
   const getTotalPrice = () => {
     return cart.reduce((acc, p) => acc + p.price * p.quantity, 0)
   }
-
-  const updateQuantity = (itemId, quantity) => {
-  if (quantity <= 0) {
-    removeItem(itemId)
-    return
-  }
-  setCart(cart.map(p =>
-    p.id === itemId ? { ...p, quantity } : p
-  ))
-}
 
   return (
     <CartContext.Provider value={{
