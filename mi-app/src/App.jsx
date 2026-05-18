@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import { CartProvider } from './context/CartContext'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
@@ -15,6 +16,7 @@ const App = () => {
     <ThemeProvider>
       <CartProvider>
         <BrowserRouter>
+        <ScrollToTop />
          <NavBar />
          <main style={{ flex: '1' }}>
           <Routes>
